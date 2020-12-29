@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 import javax.validation.Valid;
 
 @RestController
-@CrossOrigin(origins = "http://localhost:10000", allowedHeaders = "*", allowCredentials = "true")
+@CrossOrigin(origins = {"http://localhost:10000", "http://localhost:4200"}, allowedHeaders = "*", allowCredentials = "true")
 public class QueryController {
 
     @Autowired

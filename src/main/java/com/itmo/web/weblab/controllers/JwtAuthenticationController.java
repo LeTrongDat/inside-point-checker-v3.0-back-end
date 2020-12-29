@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.*;
 
 
 @RestController
-@CrossOrigin(origins = "http://localhost:10000", allowedHeaders = "*")
+@CrossOrigin(origins = {"http://localhost:10000", "http://localhost:4200"}, allowedHeaders = "*")
 public class JwtAuthenticationController {
 
     @Autowired

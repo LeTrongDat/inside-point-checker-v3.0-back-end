@@ -11,7 +11,7 @@ import java.util.Collections;
 import java.util.List;
 
 @RestController
-@CrossOrigin(origins = "http://localhost:10000", allowedHeaders = "*")
+@CrossOrigin(origins = {"http://localhost:10000", "http://localhost:4200"}, allowedHeaders = "*")
 public class ResultController {
     @Autowired
     private ResultService resultService;
