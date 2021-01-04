@@ -58,8 +58,8 @@ public class Query implements Serializable {
     }
 
     private boolean isInsideCircle() {
-        if (-this.r / 2 <= this.x && this.x <= 0 && 0 <= this.y && this.y <= this.y / 2) {
-            return Math.pow(this.x, 2) + Math.pow(this.x, 2) <= Math.pow(this.r, 2);
+        if (-this.r / 2 <= this.x && this.x <= 0 && 0 <= this.y && this.y <= this.r / 2) {
+            return Math.pow(this.x, 2) + Math.pow(this.y, 2) <= Math.pow(this.r, 2);
         }
         return false;
     }
