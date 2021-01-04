@@ -1,7 +1,11 @@
 package com.itmo.web.weblab.beans;
 
+import javax.validation.constraints.NotBlank;
+
 public class UserDTO {
+    @NotBlank
     private String username;
+    @NotBlank
     private String password;
 
     public String getUsername() {

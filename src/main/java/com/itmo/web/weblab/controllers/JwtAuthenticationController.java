@@ -14,9 +14,11 @@ import org.springframework.security.authentication.UsernamePasswordAuthenticatio
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
+
 
 @RestController
-@CrossOrigin(origins = {"http://localhost:10000", "http://localhost:4200"}, allowedHeaders = "*")
+@CrossOrigin(origins = "*")
 public class JwtAuthenticationController {
 
     @Autowired
@@ -41,7 +43,7 @@ public class JwtAuthenticationController {
     }
 
     @RequestMapping(value = "/register", method = RequestMethod.POST)
-    public ResponseEntity<?> saveUser(@RequestBody UserDTO user) throws Exception {
+    public ResponseEntity<?> saveUser(@Valid @RequestBody UserDTO user) throws Exception {
         return ResponseEntity.ok(userDetailsService.save(user));
     }
 
