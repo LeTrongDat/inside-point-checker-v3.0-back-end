@@ -135,7 +135,7 @@ __webpack_require__.r(__webpack_exports__);
 class QueryServiceService {
     constructor(http) {
         this.http = http;
-        this.postUrl = '/query';
+        this.postUrl = '/web-lab_war/query';
         this.headers = { 'Content-Type': 'application/json' };
     }
     update(query) {
@@ -908,8 +908,8 @@ __webpack_require__.r(__webpack_exports__);
 class ResultServiceService {
     constructor(http) {
         this.http = http;
-        this.getUrl = '/result';
-        this.clearUrl = '/clear';
+        this.getUrl = '/web-lab_war/result';
+        this.clearUrl = '/web-lab_war/clear';
     }
     getResults() {
         return this.http.get(this.getUrl);
@@ -1093,8 +1093,8 @@ class UserServiceService {
         this.router = router;
         this.isLoggedIn = false;
         this.token = '';
-        this.registerUrl = '/register';
-        this.loginUrl = '/authenticate';
+        this.registerUrl = '/web-lab_war/register';
+        this.loginUrl = '/web-lab_war/authenticate';
     }
     register(user) {
         return this.http.post(this.registerUrl, user);
